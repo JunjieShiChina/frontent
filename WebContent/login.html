@@ -61,7 +61,14 @@
 
             form.validate();
             if (form.isValid() == false) return;
-
+			
+            var userName = form.username;
+            var passWord = form.pwd;
+            var loginUrl = 'http://192.168.1.5:8081/SimpleUserServer/User/login?userName='+userName+'&passWord='+passWord;
+       		$.get(loginUrl,function(data){
+       			alert(data);
+       		});
+            
             loginWindow.hide();
             mini.loading("登录成功，马上转到系统...", "登录成功");
             setTimeout(function () {
