@@ -63,7 +63,7 @@
             if (form.isValid() == false) return;
 			
             var loginUrl = 'http://192.168.1.5:8081/SimpleUserServer/User/login';
-       		$.get(loginUrl,userName:${"#username"}.val(),passWord:${"#pwd"}.val(),function(json){
+       		$.getJson(loginUrl,userName:${"#username"}.val(),passWord:${"#pwd"}.val(),function(json){
        			alert(json);
        		});
             
