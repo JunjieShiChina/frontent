@@ -62,10 +62,10 @@
             form.validate();
             if (form.isValid() == false) return;
 			
-            var loginUrl = 'http://192.168.1.5:8081/SimpleUserServer/User/login';
+            /* var loginUrl = 'http://192.168.1.5:8081/SimpleUserServer/User/login';
        		$.getJson(loginUrl,userName:${"#username"}.val(),passWord:${"#pwd"}.val(),function(json){
        			alert(json);
-       		});
+       		}); */
             
             loginWindow.hide();
             mini.loading("登录成功，马上转到系统...", "登录成功");
