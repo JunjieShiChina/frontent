@@ -73,16 +73,10 @@
             form.clear();
         }
         /////////////////////////////////////
-        function isEmail(s) {
-            if (s.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
-                return true;
-            else
-                return false;
-        }
         function onUserNameValidation(e) {
             if (e.isValid) {
-                if (isEmail(e.value) == false) {
-                    e.errorText = "必须输入邮件地址";
+                if (e.value.length <= 0) {
+                    e.errorText = "用户名不能为空";
                     e.isValid = false;
                 }
             }
